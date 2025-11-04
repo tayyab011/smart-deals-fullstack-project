@@ -1,6 +1,7 @@
 import React, { use, useEffect, useState } from "react";
 import { useLoaderData, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthContext";
+import axios from "axios"
 
 const ProductDetails = () => {
   const [status,setStatus]=useState("")
@@ -32,6 +33,10 @@ const navigate= useNavigate()
       .then((res) => res.json())
       .then((data) => setBids(data));
   }, [_id,user]);
+/*   useEffect(() => {
+    axios.get(`http://localhost:5050/bids/${_id}`).then((data) =>{ console.log(data)  setBids(data.data)} );
+  }, [_id, user]);  */
+
      const bidHandler=(e)=>{
       e.preventDefault()
  const name=e.target.name.value
