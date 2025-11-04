@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+@plugin "daisyui" {
+themes: light --default;
+
+--color-primary: blue;
+  --color-secondary: teal;
+}
+body{
+  background: #B3FFAB;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.btn-primary{
+  @apply font-bold text-base text-white bg-gradient-to-r from-[#733fe5] to-[#995DF1] hover:from-[#7c60b8] hover:to-[#9655f7] hover:scale-105 rounded-lg cursor-pointer hover:font-semibold
+}
