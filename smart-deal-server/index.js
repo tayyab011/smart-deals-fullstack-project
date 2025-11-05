@@ -136,7 +136,7 @@ app.post("/getToken", (req,res)=>{
 
     app.post("/product", async (req, res) => {
       const newProduct = req.body;
-      const result = await productCollection.create(newProduct);
+      const result = await productCollection.insertOne(newProduct);
       res.send(result);
     });
     app.get("/product", async (req, res) => {
